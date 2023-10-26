@@ -22,11 +22,14 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
+    - name: GitHub Action for Yarn
+      uses: Borales/actions-yarn@v4.2.0
     - name: Build
       working-directory: contract_library
       run: |
         npm install
-        npm install yarn 
+        #        npm install yarn
+
     - run: yarn --ignore-scripts
       shell: bash
     - name: Create local node and deploy
