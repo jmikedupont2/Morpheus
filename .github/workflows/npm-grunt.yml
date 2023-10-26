@@ -26,6 +26,7 @@ jobs:
       working-directory: contract_library
       run: |
         npm install
+        npm install yarn 
     - run: yarn --ignore-scripts
       shell: bash
     - name: Create local node and deploy
